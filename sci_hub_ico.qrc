@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>new/sci-hub.ico</file>
+    </qresource>
+</RCC>
