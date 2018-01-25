@@ -37,7 +37,7 @@ void MainWindow::on_Download_clicked()
     QNetworkAccessManager *manager = new QNetworkAccessManager();
     //创建请求
     QNetworkRequest request;
-    request.setUrl(QUrl(Sci_hub_Url+Article_Url));
+    request.setUrl(QUrl(Sci_hub_Url+Article_Url.remove(QRegExp("\\s"))));
     request.setHeader(QNetworkRequest::UserAgentHeader,"Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN) AppleWebKit/533.21.1 (KHTML, like Gecko) Version/5.0.5 Safari/533.21.1");
     //发送get请求
     QNetworkReply *reply = manager->get(request);
